@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.1",
+    "dotenv": "^16.3.1",
+    "next": "13.5.4",
+    "next-auth": "^4.23.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "twitter-api-v2": "^1.15.1"
   }
 }
