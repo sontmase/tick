@@ -1,18 +1,13 @@
 import React from "react";
-import { TwitterSignOutButton } from "../../components/Button/authButtons";
-import { getServerSession } from "next-auth";
-import { authConfig } from "../../lib/auth";
-import { redirect } from "next/navigation";
-export default async function SignOutPage() {
-  const session = await getServerSession(authConfig);
 
-  console.log("Session3: ", session);
+import TwitterWidget from "../../components/Tick/TwitterWidget";
 
-  if (!session) return redirect("/");
-
+const TickPage = () => {
   return (
     <div>
-      <p>Tick page</p>
+      <TwitterWidget />
     </div>
   );
-}
+};
+
+export default TickPage;

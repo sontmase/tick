@@ -1,16 +1,16 @@
-import { getServerSession } from "next-auth";
-import { authConfig } from "../lib/auth";
-import { redirect } from "next/navigation";
+"use client";
 
-export default async function SignInPage() {
-  const session = await getServerSession(authConfig);
-  console.log("Session: ", session);
+import { Flex, useColorModeValue, Container } from "@chakra-ui/react";
 
-  if (session) return redirect("/tick");
-
+export default function ClaimPage() {
   return (
-    <div>
-      <p>Main page</p>
-    </div>
+    <Flex
+      minH={"calc(100vh - 120px)"}
+      align={"center"}
+      justify={"center"}
+      bg={useColorModeValue("gray.50", "gray.800")}
+    >
+      <Container></Container>
+    </Flex>
   );
 }

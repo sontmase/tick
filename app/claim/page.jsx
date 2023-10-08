@@ -1,14 +1,16 @@
-import React from "react";
-import { getServerSession } from "next-auth";
-import { authConfig } from "../../lib/auth";
-import { redirect } from "next/navigation";
-export default async function SignOutPage() {
-  const session = await getServerSession(authConfig);
-  if (!session) return redirect("/");
+"use client";
 
+import { Flex, useColorModeValue, Text, Container } from "@chakra-ui/react";
+
+export default function ClaimPage() {
   return (
-    <div>
-      <p>claim page</p>
-    </div>
+    <Flex
+      minH={"calc(100vh - 120px)"}
+      align={"center"}
+      justify={"center"}
+      bg={useColorModeValue("gray.50", "gray.800")}
+    >
+      <Container></Container>
+    </Flex>
   );
 }
